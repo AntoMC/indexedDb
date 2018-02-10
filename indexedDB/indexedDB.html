@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=2.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>IndexedDB: Local Database with HTML5</title>
+        <script src="js/indexedDB.js"> </script>   
+        <script src="js/jquery-3.2.1.js"> </script>   
+        <link rel="stylesheet" href="css/indexedDB.css" type="text/css" media="all" />
+        <!--<link rel="stylesheet" href="style.css" type="text/css" media="all" />-->
+    </head>
+    <body onload="startDB();">
+        <div id="contenido">
+            <div id="cajaRegistro">
+                <input type="text" name="id" id="id" value="" disabled="" />
+                <input class="data" type="text" id="dni" placeholder="Enter dni"/>
+                <input class="data" type="text" id="name" placeholder="Enter name"/>
+                <input class="data" type="text" id="surname" placeholder="Enter surname" />
+                <input type="button" id="save" name="save" onclick="add();" value="Save">
+                <!--<input type="button" id="borrardb" name="borrardb" onclick="borrardb();" value="borrardb">-->
+            </div>
+            <div id="oculto"></div>
+        <div id="elements">
+            <table>
+                <caption>Persons</caption>
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Name</th>
+                        <th> Surname </th>
+                        <th> Detalle</th>
+                        <!--<th> jjddkijdkkk</th>-->
+                    </tr>
+                </thead>
+                <tbody id="elementsList">
+                    <tr>
+                        <td colspan="8">Not elements to show</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <input type="button" class="btn-formateo" onclick="loadAllByName();" value="Order by name">
+        </div>
+    </body>
+</html>
